@@ -1,0 +1,56 @@
+rails g resource User total_score:float name:string bio:string password_digest:string  --no-test-framework
+
+rails g resource Comment dislike:integer like:integer name:string  --no-test-framework
+
+rails g resource StoryText score:float dislike:integer like:integer description:string name:string  --no-test-framework
+
+rails g resource Category name:string description:string  --no-test-framework
+
+
+
+
+rails g migration UserStoryText user_id:integer story_text_id:integer  --no-test-framework
+
+rails g migration StoryTextComment story_id:integer comment_id:integer  --no-test-framework
+
+rails g migration CommentCategory comment_id:integer category_id:integer  --no-test-framework
+
+rails g migration UserCategory user_id:integer category_id:integer  --no-test-framework
+
+rails g migration UserComment user_id:integer comment_id:integer  --no-test-framework
+
+
+
+
+
+rails g controller User new create show edit update destroy index --no-test-framework
+
+rails g controller Category new create show edit update destroy index --no-test-framework --skip-collision-check
+
+rails g controller TextStory new create show edit update destroy index --no-test-framework --skip-collision-check
+
+rails g controller api/v1/application --no-test-framework
+
+
+@amy = User.new(name: "amy", password: "barnes")
+
+
+@comic_book = Project.new(description: "super hero comic_book project", name: "CoderMan")
+
+@Art = Category.new(name: "Art")
+
+
+
+git co -b item_model
+
+rails g resource Item type
+
+pg_ctl -D /usr/local/var/postgres_dev -l logfile start
+
+pg_ctl -D /usr/local/var/postgres_dev -l logfile s
+
+
+/api/v1/
+
+
+//category attr: genre
