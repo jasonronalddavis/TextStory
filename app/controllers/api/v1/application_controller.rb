@@ -1,6 +1,11 @@
 class Api::V1::ApplicationController < ApplicationController
     before_action :authorized
-   
+    include ActionController::Cookies
+rescue_from ActiveRecord::RecordNotFound, with:
+:record_not_found
+rescue_from ActiveRecord::RecordInvalid, with: :invalid_record
+
+
     def welcome 
         
         user = User.new
@@ -9,42 +14,28 @@ class Api::V1::ApplicationController < ApplicationController
            render json: user
         end
 
+def current_user
+User.find_by(id: session[:user_id])
+end
 
+# def current_user
+#     @user ||= User.find_by(id: session[:user_id])
+#     end
 
-        def encode_token
-            JWT.encode(payload, 'your_secret')
-                 end
-            
-                 def auth_header
-                 request.headers['Authorization']
-                end
-            
-            
-            def decoded_token
-                if auth_header
-                    token = auth_header.split(' ')[1]
-                    # header: {'Authorization': 'Barnes <token>'}
-                    begin
-                        JWT.decode(token, 'yourSecret' , true, algorithm: 'HS256')
-                    rescue JWT::DecodeError
-                        nil
-                    end
-            end
-        end
-    end
-            
-            
-                 def logged_in_user
-            if decoded_token
-                user_id = decoded_token[0]['user_id']
-                @user = User.find_by(id: user_id)
-                 end
-                end
-            
+def record_not_found(errors)
+render json: errors.message, status: :not_found
+end
+
+def invalid_record
+render json: invalid.record.errors, status:
+:unprocessable_entity
+
+end
+
             
 
                  def logged_in?
-                    !!logged_in_user
+                    !!current_user
                  end
             
 

@@ -79,3 +79,27 @@
 2021-12-23 00:33:13.507 CST [2847] LOG:  invalid record length at 0/1946A80: wanted 24, got 0
 2021-12-23 00:33:13.507 CST [2847] LOG:  redo done at 0/1946A48
 2021-12-23 00:33:13.616 CST [2846] LOG:  database system is ready to accept connections
+2021-12-24 15:58:22.285 CST [3968] LOG:  starting PostgreSQL 13.4 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-24 15:58:22.645 CST [3968] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-24 15:58:22.716 CST [3968] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-24 15:58:22.924 CST [3968] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-24 15:58:25.157 CST [3976] LOG:  database system was interrupted; last known up at 2021-12-23 00:33:13 CST
+2021-12-24 15:58:35.853 CST [3976] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-12-24 15:58:36.269 CST [3976] LOG:  redo starts at 0/1946AF8
+2021-12-24 15:58:36.269 CST [3976] LOG:  invalid record length at 0/1946B30: wanted 24, got 0
+2021-12-24 15:58:36.269 CST [3976] LOG:  redo done at 0/1946AF8
+2021-12-24 15:58:36.835 CST [3968] LOG:  database system is ready to accept connections
+2021-12-25 16:15:07.464 CST [4123] FATAL:  lock file "postmaster.pid" already exists
+2021-12-25 16:15:07.464 CST [4123] HINT:  Is another postmaster (PID 4050) running in data directory "/usr/local/var/postgres_dev"?
+2021-12-25 16:17:53.076 CST [4181] FATAL:  lock file "postmaster.pid" already exists
+2021-12-25 16:17:53.076 CST [4181] HINT:  Is another postmaster (PID 4050) running in data directory "/usr/local/var/postgres_dev"?
+2021-12-25 16:21:39.862 CST [5678] FATAL:  lock file "postmaster.pid" already exists
+2021-12-25 16:21:39.862 CST [5678] HINT:  Is another postmaster (PID 4050) running in data directory "/usr/local/var/postgres_dev"?
+2021-12-25 19:39:04.181 CST [6561] FATAL:  lock file "postmaster.pid" already exists
+2021-12-25 19:39:04.181 CST [6561] HINT:  Is another postmaster (PID 4050) running in data directory "/usr/local/var/postgres_dev"?
+2021-12-25 19:39:18.951 CST [6579] LOG:  starting PostgreSQL 13.4 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-25 19:39:18.953 CST [6579] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-25 19:39:18.954 CST [6579] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-25 19:39:18.954 CST [6579] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-25 19:39:19.550 CST [6580] LOG:  database system was shut down at 2021-12-25 19:39:13 CST
+2021-12-25 19:39:19.552 CST [6579] LOG:  database system is ready to accept connections

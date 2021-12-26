@@ -13,15 +13,6 @@ before_action :authorized, only: [:auto_login]
 
 
 
-def create
-@user = User.create(user_params)
-if @user.valid?
-    token = encode_token({user_id: @user.id})
-    render json: {user: @user, token: token}
-else
-    render json: {error: "invalid usernameor password"}
-end
-end
 
 
 
@@ -39,16 +30,31 @@ end
     
 
      def show
-        @user = User.new(user_params)
-        render json: @user
-       # binding.pry  
+        if current_user
+        render json: current_user, status: :ok
+        else
+            render json: "Not authenticated", status:
+            :unauthorized
+        end
      end
 
-     
-def auto_login
-    render json: @user
-end
-  
+
+
+
+     def create
+        @user = User.create(user_params)
+        if @user.valid?
+            session[:user_id] = @user.id
+          render json: @user, status: :created
+        else
+            render json: {error: "invalid username or password"}
+        end
+        end
+
+
+
+
+
     private
     
         def user_params 

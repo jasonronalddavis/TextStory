@@ -13,6 +13,17 @@ Rails.application.routes.draw do
 
       root to: 'application#welcome'  
 
+
+      resources :sessions
+
+
+      post '/login', to: 'sessions#create'
+   
+      delete '/logout', to: 'sessions#destroy'
+     
+
+
+
       resources :users do
       resources :story_texts
       resources :categories
@@ -50,7 +61,7 @@ end
 
 
   resources :users do
-    
+   
     resources :story_texts
     resources :categories
   end
