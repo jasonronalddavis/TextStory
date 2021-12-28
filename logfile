@@ -103,3 +103,23 @@
 2021-12-25 19:39:18.954 CST [6579] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2021-12-25 19:39:19.550 CST [6580] LOG:  database system was shut down at 2021-12-25 19:39:13 CST
 2021-12-25 19:39:19.552 CST [6579] LOG:  database system is ready to accept connections
+2021-12-26 16:44:43.065 CST [4122] LOG:  starting PostgreSQL 13.4 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-26 16:44:43.298 CST [4122] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-26 16:44:43.299 CST [4122] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-26 16:44:43.386 CST [4122] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-26 16:44:44.568 CST [4123] LOG:  database system was interrupted; last known up at 2021-12-25 19:44:19 CST
+2021-12-26 16:44:47.701 CST [4123] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-12-26 16:44:47.820 CST [4123] LOG:  redo starts at 0/1946D40
+2021-12-26 16:44:47.820 CST [4123] LOG:  invalid record length at 0/1946E28: wanted 24, got 0
+2021-12-26 16:44:47.820 CST [4123] LOG:  redo done at 0/1946DF0
+2021-12-26 16:44:47.897 CST [4122] LOG:  database system is ready to accept connections
+2021-12-27 18:14:53.422 CST [4762] LOG:  starting PostgreSQL 13.4 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-27 18:14:53.518 CST [4762] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-27 18:14:53.518 CST [4762] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-27 18:14:53.532 CST [4762] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-27 18:14:54.702 CST [4763] LOG:  database system was interrupted; last known up at 2021-12-26 16:49:48 CST
+2021-12-27 18:15:00.824 CST [4763] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-12-27 18:15:01.002 CST [4763] LOG:  redo starts at 0/194CBE8
+2021-12-27 18:15:01.002 CST [4763] LOG:  invalid record length at 0/194CCD0: wanted 24, got 0
+2021-12-27 18:15:01.003 CST [4763] LOG:  redo done at 0/194CC98
+2021-12-27 18:15:01.134 CST [4762] LOG:  database system is ready to accept connections
