@@ -155,3 +155,26 @@
 2021-12-28 18:16:07.387 CST [3807] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2021-12-28 18:16:07.449 CST [3808] LOG:  database system was shut down at 2021-12-28 18:15:59 CST
 2021-12-28 18:16:07.463 CST [3807] LOG:  database system is ready to accept connections
+2021-12-28 19:04:58.591 CST [5058] FATAL:  lock file "postmaster.pid" already exists
+2021-12-28 19:04:58.591 CST [5058] HINT:  Is another postmaster (PID 3807) running in data directory "/usr/local/var/postgres_dev"?
+2021-12-28 19:05:05.121 CST [3807] LOG:  received fast shutdown request
+2021-12-28 19:05:05.121 CST [3807] LOG:  aborting any active transactions
+2021-12-28 19:05:05.122 CST [3807] LOG:  background worker "logical replication launcher" (PID 3814) exited with exit code 1
+2021-12-28 19:05:05.123 CST [3809] LOG:  shutting down
+2021-12-28 19:05:05.278 CST [3807] LOG:  database system is shut down
+2021-12-28 19:05:09.995 CST [5072] LOG:  starting PostgreSQL 13.4 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-28 19:05:10.043 CST [5072] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-28 19:05:10.043 CST [5072] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-28 19:05:10.043 CST [5072] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-28 19:05:10.525 CST [5073] LOG:  database system was shut down at 2021-12-28 19:05:05 CST
+2021-12-28 19:05:10.535 CST [5072] LOG:  database system is ready to accept connections
+2021-12-29 15:45:33.856 CST [3666] LOG:  starting PostgreSQL 13.4 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-29 15:45:35.139 CST [3666] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-29 15:45:35.139 CST [3666] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-29 15:45:35.639 CST [3666] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-29 15:45:41.389 CST [3673] LOG:  database system was interrupted; last known up at 2021-12-28 19:10:10 CST
+2021-12-29 15:45:50.328 CST [3673] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-12-29 15:45:50.834 CST [3673] LOG:  redo starts at 0/194D128
+2021-12-29 15:45:50.835 CST [3673] LOG:  invalid record length at 0/194D210: wanted 24, got 0
+2021-12-29 15:45:50.835 CST [3673] LOG:  redo done at 0/194D1D8
+2021-12-29 15:45:51.582 CST [3666] LOG:  database system is ready to accept connections

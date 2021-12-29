@@ -7,8 +7,8 @@ before_action :authorized, only: [:auto_login]
     def index
         users = User.all
         render json: users, include: ['story_texts']
-        # or
-#        binding.pry 
+        UserSerializer.new(users).to_serialized_json(:story_texts, :errors)
+    #  binding.pry 
     end
 
 
