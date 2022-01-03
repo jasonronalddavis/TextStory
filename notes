@@ -54,3 +54,6 @@ pg_ctl -D /usr/local/var/postgres_dev -l logfile s
 
 
 //category attr: genre
+
+
+rails s -p 3001

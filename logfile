@@ -178,3 +178,134 @@
 2021-12-29 15:45:50.835 CST [3673] LOG:  invalid record length at 0/194D210: wanted 24, got 0
 2021-12-29 15:45:50.835 CST [3673] LOG:  redo done at 0/194D1D8
 2021-12-29 15:45:51.582 CST [3666] LOG:  database system is ready to accept connections
+2021-12-29 17:11:48.196 CST [3666] LOG:  received fast shutdown request
+2021-12-29 17:11:48.241 CST [3666] LOG:  aborting any active transactions
+2021-12-29 17:11:48.481 CST [3666] LOG:  background worker "logical replication launcher" (PID 3683) exited with exit code 1
+2021-12-29 17:11:48.481 CST [3678] LOG:  shutting down
+2021-12-29 17:11:48.571 CST [3666] LOG:  database system is shut down
+2021-12-29 17:11:56.071 CST [6281] LOG:  starting PostgreSQL 13.4 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-29 17:11:56.127 CST [6281] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-29 17:11:56.127 CST [6281] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-29 17:11:56.128 CST [6281] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-29 17:11:56.815 CST [6286] LOG:  database system was shut down at 2021-12-29 17:11:48 CST
+2021-12-29 17:11:56.831 CST [6281] LOG:  database system is ready to accept connections
+2021-12-29 17:35:52.806 CST [6281] LOG:  received fast shutdown request
+2021-12-29 17:35:52.846 CST [6281] LOG:  aborting any active transactions
+2021-12-29 17:35:52.847 CST [6281] LOG:  background worker "logical replication launcher" (PID 6292) exited with exit code 1
+2021-12-29 17:35:52.847 CST [6287] LOG:  shutting down
+2021-12-29 17:35:52.956 CST [6281] LOG:  database system is shut down
+2021-12-29 17:35:59.438 CST [6594] LOG:  starting PostgreSQL 13.4 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-29 17:35:59.488 CST [6594] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-29 17:35:59.488 CST [6594] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-29 17:35:59.489 CST [6594] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-29 17:36:00.397 CST [6600] LOG:  database system was shut down at 2021-12-29 17:35:52 CST
+2021-12-29 17:36:00.476 CST [6594] LOG:  database system is ready to accept connections
+2021-12-29 18:16:53.898 CST [7201] ERROR:  column user_comments.story_text_id does not exist at character 56
+2021-12-29 18:16:53.898 CST [7201] STATEMENT:  SELECT "user_comments"."id" FROM "user_comments" WHERE "user_comments"."story_text_id" = $1
+2021-12-29 18:18:13.266 CST [7201] ERROR:  column user_comments.story_text_id does not exist at character 56
+2021-12-29 18:18:13.266 CST [7201] STATEMENT:  SELECT "user_comments"."id" FROM "user_comments" WHERE "user_comments"."story_text_id" = $1
+2021-12-29 18:19:06.718 CST [7201] ERROR:  column user_comments.story_text_id does not exist at character 56
+2021-12-29 18:19:06.718 CST [7201] STATEMENT:  SELECT "user_comments"."id" FROM "user_comments" WHERE "user_comments"."story_text_id" = $1
+2021-12-29 18:19:08.629 CST [7201] ERROR:  column user_comments.story_text_id does not exist at character 56
+2021-12-29 18:19:08.629 CST [7201] STATEMENT:  SELECT "user_comments"."id" FROM "user_comments" WHERE "user_comments"."story_text_id" = $1
+2021-12-29 18:19:24.398 CST [7201] ERROR:  column user_comments.story_text_id does not exist at character 56
+2021-12-29 18:19:24.398 CST [7201] STATEMENT:  SELECT "user_comments"."id" FROM "user_comments" WHERE "user_comments"."story_text_id" = $1
+2021-12-29 18:48:00.104 CST [6594] LOG:  received fast shutdown request
+2021-12-29 18:48:00.149 CST [6594] LOG:  aborting any active transactions
+2021-12-29 18:48:00.163 CST [6594] LOG:  background worker "logical replication launcher" (PID 6606) exited with exit code 1
+2021-12-29 18:48:00.163 CST [6601] LOG:  shutting down
+2021-12-29 18:48:00.306 CST [6594] LOG:  database system is shut down
+2021-12-29 18:48:06.193 CST [14533] FATAL:  database files are incompatible with server
+2021-12-29 18:48:06.193 CST [14533] DETAIL:  The data directory was initialized by PostgreSQL version 13, which is not compatible with this version 14.1.
+2021-12-29 18:52:59.988 CST [14611] FATAL:  database files are incompatible with server
+2021-12-29 18:52:59.988 CST [14611] DETAIL:  The data directory was initialized by PostgreSQL version 13, which is not compatible with this version 14.1.
+2021-12-29 18:53:32.034 CST [14627] FATAL:  database files are incompatible with server
+2021-12-29 18:53:32.034 CST [14627] DETAIL:  The data directory was initialized by PostgreSQL version 13, which is not compatible with this version 14.1.
+2021-12-29 18:53:53.802 CST [14642] FATAL:  database files are incompatible with server
+2021-12-29 18:53:53.802 CST [14642] DETAIL:  The data directory was initialized by PostgreSQL version 13, which is not compatible with this version 14.1.
+2021-12-29 18:54:33.474 CST [14669] FATAL:  database files are incompatible with server
+2021-12-29 18:54:33.474 CST [14669] DETAIL:  The data directory was initialized by PostgreSQL version 13, which is not compatible with this version 14.1.
+2021-12-29 18:55:24.596 CST [14683] FATAL:  database files are incompatible with server
+2021-12-29 18:55:24.596 CST [14683] DETAIL:  The data directory was initialized by PostgreSQL version 13, which is not compatible with this version 14.1.
+2021-12-29 18:59:11.908 CST [15038] FATAL:  database files are incompatible with server
+2021-12-29 18:59:11.908 CST [15038] DETAIL:  The data directory was initialized by PostgreSQL version 13, which is not compatible with this version 14.1.
+2021-12-29 19:20:24.556 CST [17849] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-29 19:20:24.632 CST [17849] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-29 19:20:24.632 CST [17849] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-29 19:20:24.676 CST [17849] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-29 19:20:25.279 CST [17853] LOG:  database system was shut down at 2021-12-29 18:48:00 CST
+2021-12-29 19:20:25.329 CST [17849] LOG:  database system is ready to accept connections
+2021-12-29 19:25:59.395 CST [19206] FATAL:  lock file "postmaster.pid" already exists
+2021-12-29 19:25:59.395 CST [19206] HINT:  Is another postmaster (PID 17849) running in data directory "/usr/local/var/postgres_dev"?
+2021-12-29 19:26:09.310 CST [17849] LOG:  received fast shutdown request
+2021-12-29 19:26:09.339 CST [17849] LOG:  aborting any active transactions
+2021-12-29 19:26:09.340 CST [17849] LOG:  background worker "logical replication launcher" (PID 17859) exited with exit code 1
+2021-12-29 19:26:09.340 CST [17854] LOG:  shutting down
+2021-12-29 19:26:09.368 CST [17849] LOG:  database system is shut down
+2021-12-29 19:26:13.442 CST [19222] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-29 19:26:13.482 CST [19222] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-29 19:26:13.482 CST [19222] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-29 19:26:13.483 CST [19222] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-29 19:26:14.025 CST [19223] LOG:  database system was shut down at 2021-12-29 19:26:09 CST
+2021-12-29 19:26:14.028 CST [19222] LOG:  database system is ready to accept connections
+2021-12-29 20:36:40.640 CST [19800] ERROR:  column story_text_categories.user_id does not exist at character 146
+2021-12-29 20:36:40.640 CST [19800] STATEMENT:  SELECT "categories"."id" FROM "categories" INNER JOIN "story_text_categories" ON "categories"."id" = "story_text_categories"."category_id" WHERE "story_text_categories"."user_id" = $1
+2021-12-29 20:40:18.441 CST [20700] ERROR:  relation "story_text_categories" already exists
+2021-12-29 20:40:18.441 CST [20700] STATEMENT:  CREATE TABLE "story_text_categories" ("id" bigserial primary key, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)
+2021-12-29 20:41:53.784 CST [20743] ERROR:  column user_comments.story_text_id does not exist at character 56
+2021-12-29 20:41:53.784 CST [20743] STATEMENT:  SELECT "user_comments"."id" FROM "user_comments" WHERE "user_comments"."story_text_id" = $1
+2021-12-29 20:44:32.815 CST [20816] ERROR:  column story_text_comments.user_id does not exist at character 135
+2021-12-29 20:44:32.815 CST [20816] STATEMENT:  SELECT "comments"."id" FROM "comments" INNER JOIN "story_text_comments" ON "comments"."id" = "story_text_comments"."comment_id" WHERE "story_text_comments"."user_id" = $1
+2021-12-30 15:58:06.493 CST [3462] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-30 15:58:06.610 CST [3462] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-30 15:58:06.610 CST [3462] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-30 15:58:06.623 CST [3462] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-30 15:58:07.372 CST [3463] LOG:  database system was interrupted; last known up at 2021-12-29 20:51:14 CST
+2021-12-30 15:58:08.991 CST [3463] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-12-30 15:58:09.062 CST [3463] LOG:  redo starts at 0/19919A0
+2021-12-30 15:58:09.062 CST [3463] LOG:  invalid record length at 0/1991A88: wanted 24, got 0
+2021-12-30 15:58:09.062 CST [3463] LOG:  redo done at 0/1991A50
+2021-12-30 15:58:09.125 CST [3462] LOG:  database system is ready to accept connections
+2021-12-31 15:59:41.853 CST [4145] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2021-12-31 15:59:45.945 CST [4145] LOG:  listening on IPv6 address "::1", port 5432
+2021-12-31 15:59:45.945 CST [4145] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-12-31 15:59:47.660 CST [4145] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-12-31 15:59:54.034 CST [4155] LOG:  database system was interrupted; last known up at 2021-12-30 15:58:09 CST
+2021-12-31 16:00:03.359 CST [4155] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-12-31 16:00:03.741 CST [4155] LOG:  redo starts at 0/1991B00
+2021-12-31 16:00:03.741 CST [4155] LOG:  invalid record length at 0/1991B38: wanted 24, got 0
+2021-12-31 16:00:03.741 CST [4155] LOG:  redo done at 0/1991B00
+2021-12-31 16:00:04.520 CST [4145] LOG:  database system is ready to accept connections
+2022-01-01 15:29:36.888 CST [3559] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-01 15:29:37.373 CST [3559] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-01 15:29:37.373 CST [3559] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-01 15:29:37.527 CST [3559] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-01 15:29:40.411 CST [3564] LOG:  database system was interrupted; last known up at 2021-12-31 16:00:04 CST
+2022-01-01 15:29:46.982 CST [3564] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-01 15:29:47.591 CST [3564] LOG:  redo starts at 0/1991BB0
+2022-01-01 15:29:47.591 CST [3564] LOG:  invalid record length at 0/1991BE8: wanted 24, got 0
+2022-01-01 15:29:47.591 CST [3564] LOG:  redo done at 0/1991BB0
+2022-01-01 15:29:50.109 CST [3559] LOG:  database system is ready to accept connections
+2022-01-02 15:51:45.949 CST [3539] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-02 15:51:46.746 CST [3539] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-02 15:51:46.746 CST [3539] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-02 15:51:47.610 CST [3539] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-02 15:51:51.843 CST [3549] LOG:  database system was interrupted; last known up at 2022-01-01 15:29:49 CST
+2022-01-02 15:51:58.707 CST [3549] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-02 15:51:59.333 CST [3549] LOG:  redo starts at 0/1991C60
+2022-01-02 15:51:59.333 CST [3549] LOG:  invalid record length at 0/1991C98: wanted 24, got 0
+2022-01-02 15:51:59.333 CST [3549] LOG:  redo done at 0/1991C60
+2022-01-02 15:51:59.729 CST [3539] LOG:  database system is ready to accept connections
+2022-01-02 18:57:22.181 CST [4733] FATAL:  lock file "postmaster.pid" already exists
+2022-01-02 18:57:22.181 CST [4733] HINT:  Is another postmaster (PID 3539) running in data directory "/usr/local/var/postgres_dev"?
+2022-01-02 18:58:09.521 CST [3539] LOG:  received fast shutdown request
+2022-01-02 18:58:09.522 CST [3539] LOG:  aborting any active transactions
+2022-01-02 18:58:09.556 CST [3539] LOG:  background worker "logical replication launcher" (PID 3559) exited with exit code 1
+2022-01-02 18:58:09.557 CST [3554] LOG:  shutting down
+2022-01-02 18:58:09.670 CST [3539] LOG:  database system is shut down
+2022-01-02 18:58:14.069 CST [5287] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-02 18:58:14.124 CST [5287] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-02 18:58:14.124 CST [5287] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-02 18:58:14.125 CST [5287] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-02 18:58:14.566 CST [5288] LOG:  database system was shut down at 2022-01-02 18:58:09 CST
+2022-01-02 18:58:14.574 CST [5287] LOG:  database system is ready to accept connections

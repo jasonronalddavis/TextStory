@@ -1,13 +1,11 @@
 class Api::V1::UsersController < ApplicationController
 
-before_action :authorized, only: [:auto_login]
-
+before_action :authorized, only: [:random]
 
 
     def index
         users = User.all
-        render json: users, include: ['story_texts']
-        UserSerializer.new(users).to_serialized_json(:story_texts, :errors)
+        render json: UserSerializer.new(users)
     #  binding.pry 
     end
 
@@ -17,8 +15,8 @@ before_action :authorized, only: [:auto_login]
 
 
     def login
+    binding.pry
     @user = User.find_by(name: parmas[:name])
-
     if @user && @user.authenticate(parmas[:password])
         token = encode_token({user_id: @user.id})
         render json: {user: @user, token: token}
@@ -49,7 +47,7 @@ before_action :authorized, only: [:auto_login]
         else
             render json: {error: "invalid username or password"}
         end
-        end
+    end
 
 
 
@@ -58,8 +56,7 @@ before_action :authorized, only: [:auto_login]
     private
     
         def user_params 
-        params.permit(:id, :name, :password, :category_id, :story_text_id, :comment_id)
-          
+        params.permit(:id, :name, :password, :category_id, :story_text_id, :comment_id)    
     end
     
 

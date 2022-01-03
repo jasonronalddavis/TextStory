@@ -7,22 +7,8 @@ Rails.application.routes.draw do
 
 
 
-
-
     namespace :admin do
-
       root to: 'application#welcome'  
-
-
-      resources :sessions
-
-
-      post '/login', to: 'sessions#create'
-   
-      delete '/logout', to: 'sessions#destroy'
-     
-
-
 
       resources :users do
       resources :story_texts
@@ -37,7 +23,6 @@ Rails.application.routes.draw do
     end
   
     resources :categories do
-  
     resources :users
     resources :story_texts
    
@@ -51,9 +36,6 @@ Rails.application.routes.draw do
     resources :categories
    
   end
-
-
-
 end
 
 
@@ -61,7 +43,7 @@ end
 
 
   resources :users do
-   
+    post '/api/v1/users/login', to: '/api/v1/sessions#create'
     resources :story_texts
     resources :categories
   end
