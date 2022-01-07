@@ -1,6 +1,5 @@
 class Api::V1::StoryTextsController < ApplicationController
     
-    before_action :authorized, only: [:auto_login]
     
     
     def index

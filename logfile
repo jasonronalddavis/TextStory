@@ -309,3 +309,69 @@
 2022-01-02 18:58:14.125 CST [5287] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2022-01-02 18:58:14.566 CST [5288] LOG:  database system was shut down at 2022-01-02 18:58:09 CST
 2022-01-02 18:58:14.574 CST [5287] LOG:  database system is ready to accept connections
+2022-01-03 18:00:23.018 CST [3562] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-03 18:00:23.189 CST [3562] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-03 18:00:23.189 CST [3562] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-03 18:00:23.202 CST [3562] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-03 18:00:24.207 CST [3563] LOG:  database system was interrupted; last known up at 2022-01-02 19:03:14 CST
+2022-01-03 18:00:25.074 CST [3563] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-03 18:00:25.253 CST [3563] LOG:  redo starts at 0/1991DF8
+2022-01-03 18:00:25.253 CST [3563] LOG:  invalid record length at 0/1991EE0: wanted 24, got 0
+2022-01-03 18:00:25.253 CST [3563] LOG:  redo done at 0/1991EA8
+2022-01-03 18:00:25.339 CST [3562] LOG:  database system is ready to accept connections
+2022-01-03 18:19:26.079 CST [4220] FATAL:  lock file "postmaster.pid" already exists
+2022-01-03 18:19:26.079 CST [4220] HINT:  Is another postmaster (PID 3562) running in data directory "/usr/local/var/postgres_dev"?
+2022-01-04 03:31:03.810 CST [3374] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-04 03:31:04.087 CST [3374] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-04 03:31:04.087 CST [3374] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-04 03:31:04.233 CST [3374] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-04 03:31:06.272 CST [3378] LOG:  database system was interrupted; last known up at 2022-01-03 18:00:25 CST
+2022-01-04 03:31:07.533 CST [3378] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-04 03:31:07.607 CST [3378] LOG:  redo starts at 0/1991F58
+2022-01-04 03:31:07.607 CST [3378] LOG:  invalid record length at 0/1991F90: wanted 24, got 0
+2022-01-04 03:31:07.607 CST [3378] LOG:  redo done at 0/1991F58
+2022-01-04 03:31:07.651 CST [3374] LOG:  database system is ready to accept connections
+2022-01-04 13:06:48.763 CST [3310] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-04 13:06:49.318 CST [3310] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-04 13:06:49.318 CST [3310] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-04 13:06:49.772 CST [3310] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-04 13:06:53.666 CST [3319] LOG:  database system was interrupted; last known up at 2022-01-04 03:31:07 CST
+2022-01-04 13:06:58.946 CST [3319] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-04 13:06:59.858 CST [3319] LOG:  redo starts at 0/1992020
+2022-01-04 13:06:59.858 CST [3319] LOG:  invalid record length at 0/1992058: wanted 24, got 0
+2022-01-04 13:06:59.858 CST [3319] LOG:  redo done at 0/1992020
+2022-01-04 13:07:01.142 CST [3310] LOG:  database system is ready to accept connections
+2022-01-04 15:42:25.525 CST [4948] ERROR:  argument of WHERE must be type boolean, not type character varying at character 38
+2022-01-04 15:42:25.525 CST [4948] STATEMENT:  SELECT "users".* FROM "users" WHERE (name) LIMIT $1
+2022-01-04 19:43:21.799 CST [3325] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-01-04 19:53:21.725 CST [3325] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-01-04 19:54:19.615 CST [7081] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-01-04 19:54:21.369 CST [3325] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-01-04 19:54:33.313 CST [7100] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-01-04 21:30:27.092 CST [3325] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-01-04 21:37:27.043 CST [3325] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-01-04 21:39:26.966 CST [3325] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-01-05 13:01:54.666 CST [3589] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-05 13:01:54.936 CST [3589] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-05 13:01:54.936 CST [3589] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-05 13:01:55.112 CST [3589] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-05 13:01:57.520 CST [3592] LOG:  database system was interrupted; last known up at 2022-01-04 13:07:00 CST
+2022-01-05 13:01:59.725 CST [3592] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-05 13:01:59.872 CST [3592] LOG:  redo starts at 0/19920D0
+2022-01-05 13:01:59.872 CST [3592] LOG:  invalid record length at 0/1992108: wanted 24, got 0
+2022-01-05 13:01:59.872 CST [3592] LOG:  redo done at 0/19920D0
+2022-01-05 13:01:59.997 CST [3589] LOG:  database system is ready to accept connections
+2022-01-05 13:18:20.831 CST [3736] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-01-06 19:38:38.824 CST [3430] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-06 19:38:40.101 CST [3430] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-06 19:38:40.101 CST [3430] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-06 19:38:41.023 CST [3430] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-06 19:38:49.792 CST [3442] LOG:  database system was interrupted; last known up at 2022-01-05 13:01:59 CST
+2022-01-06 19:38:56.999 CST [3442] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-06 19:38:57.524 CST [3442] LOG:  redo starts at 0/1992180
+2022-01-06 19:38:57.524 CST [3442] LOG:  invalid record length at 0/19921B8: wanted 24, got 0
+2022-01-06 19:38:57.524 CST [3442] LOG:  redo done at 0/1992180
+2022-01-06 19:38:59.104 CST [3430] LOG:  database system is ready to accept connections
+2022-01-06 20:10:38.682 CST [3730] ERROR:  column "jd" does not exist at character 38
+2022-01-06 20:10:38.682 CST [3730] HINT:  Perhaps you meant to reference the column "users.id".
+2022-01-06 20:10:38.682 CST [3730] STATEMENT:  SELECT "users".* FROM "users" WHERE (JD) LIMIT $1

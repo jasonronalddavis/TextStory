@@ -42,8 +42,19 @@ end
 
 
 
+
+resources :sessions
+get 'users/login'
+post 'users/login', to: 'sessions#create'
+
+
+
+
+
+post 'users/login', to: 'users#login'
+
+
   resources :users do
-    post '/api/v1/users/login', to: '/api/v1/sessions#create'
     resources :story_texts
     resources :categories
   end
