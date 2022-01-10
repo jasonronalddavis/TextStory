@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   namespace :api do
    namespace :v1 do
 
@@ -43,10 +44,11 @@ end
 
 
 
-resources :sessions
+
 get 'users/login'
 post 'users/login', to: 'sessions#create'
-
+get'get_current_user', to: 'sessions#get_current_user'
+get'destroy', to: 'sessions#destroy'
 
 
 

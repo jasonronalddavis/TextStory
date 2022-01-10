@@ -1,5 +1,5 @@
 class Api::V1::ApplicationController < ApplicationController
-before_action :authorized
+#before_action :authorized
 rescue_from ActiveRecord::RecordNotFound, with:
 :record_not_found
 rescue_from ActiveRecord::RecordInvalid, with: :invalid_record
@@ -12,13 +12,14 @@ rescue_from ActiveRecord::RecordInvalid, with: :invalid_record
            render json: user
         end
 
-def current_user
-User.find(session[:user_id])
-end
 
-# def current_user
-#     @user ||= User.find_by(id: session[:user_id])
-#     end
+
+
+        def current_user
+        User.find_by(id: session[:user_id])
+       end
+
+
 
 def record_not_found(errors)
 render json: errors.message, status: :not_found

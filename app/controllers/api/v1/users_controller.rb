@@ -1,6 +1,5 @@
 class Api::V1::UsersController < ApplicationController
 
-before_action :authorized, only: [:random]
 
 
     def index
@@ -23,6 +22,12 @@ before_action :authorized, only: [:random]
         render json: {error: "Invalid username or password"}
     end  
     end
+
+
+
+
+
+    
 
     
 
