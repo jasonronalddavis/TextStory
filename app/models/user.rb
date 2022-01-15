@@ -13,5 +13,5 @@ has_many :comments, through: :user_comments
 has_many :story_text_comments 
 has_many :comments, through: :story_text_comments 
 
-validates :username, uniqueness: true
+validates :name, uniqueness: true
 end

@@ -42,18 +42,17 @@ end
 
 
 
-
-
-
-get 'users/login'
-post 'users/login', to: 'sessions#create'
+get 'signup', to: 'sessions#signup'
+post 'signup', to: "users#create"
+get 'login'
+post 'login', to: 'sessions#create'
 get'get_current_user', to: 'sessions#get_current_user'
-get'destroy', to: 'sessions#destroy'
+delete 'logout', to: 'sessions#destroy'
 
 
 
 
-post 'users/login', to: 'users#login'
+post 'login', to: 'users#login'
 
 
   resources :users do

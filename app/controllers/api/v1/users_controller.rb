@@ -13,23 +13,7 @@ class Api::V1::UsersController < ApplicationController
 
 
 
-    def login
-    @user = User.find_by(name: params[:name])
-    if @user && @user.authenticate(params[:password])
-        token = encode_token({user_id: @user.id})
-        render json: {user: @user, token: token}
-    else
-        render json: {error: "Invalid username or password"}
-    end  
-    end
 
-
-
-
-
-    
-
-    
 
      def show
         if current_user
@@ -44,12 +28,13 @@ class Api::V1::UsersController < ApplicationController
 
 
      def create
-        @user = User.create(user_params)
-        if @user.valid?
+      #  binding.pry
+        @user = User.new(user_params)
+        if @user.save
             session[:user_id] = @user.id
           render json: @user, status: :created
         else
-            render json: {error: "invalid username or password"}
+            render json: {error: "invalid name or password"}
         end
     end
 
@@ -60,7 +45,7 @@ class Api::V1::UsersController < ApplicationController
     private
     
         def user_params 
-        params.permit(:id, :name, :password, :category_id, :story_text_id, :comment_id)    
+        params.require(:user).permit(:name, :password)    
     end
     
 

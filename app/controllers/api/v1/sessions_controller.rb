@@ -15,6 +15,30 @@ class Api::V1::SessionsController < ApplicationController
     end
 
 
+
+
+
+    def login
+      @user = User.find_by(name: params[:name])
+      if @user && @user.authenticate(params[:password])
+          token = encode_token({user_id: @user.id})
+          render json: {user: @user, token: token}
+      else
+          render json: {error: "Invalid username or password"}
+      end  
+      end
+
+def signup
+  @user = User.find_by(name: params[:name])
+  if @user
+  token = encode_token({user_id: @user.id})
+  render json: {user: @user, token: token}
+else
+  render json: {error: "Invalid username or password"}
+end  
+end
+
+
     def get_current_user
       if logged_in?
        # binding.pry
@@ -29,9 +53,9 @@ class Api::V1::SessionsController < ApplicationController
 
 
     def destroy 
-      session.delete :user_id
+      session.clear
       render json: {
-        error: "Not logged in"
+        notice: "Not logged in"
       }
     end
     

@@ -57,3 +57,7 @@ pg_ctl -D /usr/local/var/postgres_dev -l logfile s
 
 
 rails s -p 3001
+
+
+
+//https://docs.google.com/spreadsheets/d/1a-hlF6DurA_GHxcTUjNiFl4_Oju7LAtRGY-lhvV54bQ/edit#gid=1196678344

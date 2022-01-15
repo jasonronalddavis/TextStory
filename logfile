@@ -432,3 +432,74 @@
 2022-01-09 16:24:33.054 CST [4084] LOG:  invalid record length at 0/1992610: wanted 24, got 0
 2022-01-09 16:24:33.054 CST [4084] LOG:  redo done at 0/19925D8
 2022-01-09 16:24:33.117 CST [4080] LOG:  database system is ready to accept connections
+2022-01-10 10:51:55.420 CST [3479] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-10 10:51:55.567 CST [3479] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-10 10:51:55.567 CST [3479] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-10 10:51:55.568 CST [3479] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-10 10:51:56.403 CST [3480] LOG:  database system was interrupted; last known up at 2022-01-09 16:24:33 CST
+2022-01-10 10:51:57.805 CST [3480] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-10 10:51:57.842 CST [3480] LOG:  redo starts at 0/1992688
+2022-01-10 10:51:57.842 CST [3480] LOG:  invalid record length at 0/19926C0: wanted 24, got 0
+2022-01-10 10:51:57.842 CST [3480] LOG:  redo done at 0/1992688
+2022-01-10 10:51:57.960 CST [3479] LOG:  database system is ready to accept connections
+2022-01-10 22:33:39.756 CST [3811] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-10 22:33:41.338 CST [3811] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-10 22:33:41.422 CST [3811] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-10 22:33:41.776 CST [3811] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-10 22:33:49.987 CST [3822] LOG:  database system was interrupted; last known up at 2022-01-10 10:51:57 CST
+2022-01-10 22:34:08.255 CST [3822] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-10 22:34:08.481 CST [3822] LOG:  redo starts at 0/1992738
+2022-01-10 22:34:08.481 CST [3822] LOG:  invalid record length at 0/1992770: wanted 24, got 0
+2022-01-10 22:34:08.481 CST [3822] LOG:  redo done at 0/1992738
+2022-01-10 22:34:09.145 CST [3811] LOG:  database system is ready to accept connections
+2022-01-11 16:21:37.856 CST [3336] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-11 16:21:38.658 CST [3336] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-11 16:21:38.658 CST [3336] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-11 16:21:38.895 CST [3336] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-11 16:21:43.948 CST [3343] LOG:  database system was interrupted; last known up at 2022-01-10 22:34:08 CST
+2022-01-11 16:21:56.368 CST [3343] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-11 16:21:57.167 CST [3343] LOG:  redo starts at 0/19927E8
+2022-01-11 16:21:57.167 CST [3343] LOG:  invalid record length at 0/1992820: wanted 24, got 0
+2022-01-11 16:21:57.167 CST [3343] LOG:  redo done at 0/19927E8
+2022-01-11 16:21:59.717 CST [3336] LOG:  database system is ready to accept connections
+2022-01-11 17:28:27.957 CST [3353] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-01-12 13:36:16.762 CST [3567] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-12 13:36:18.622 CST [3567] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-12 13:36:19.129 CST [3567] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-12 13:36:23.405 CST [3567] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-12 13:36:25.495 CST [3583] LOG:  database system was interrupted; last known up at 2022-01-11 16:21:58 CST
+2022-01-12 13:36:29.819 CST [3583] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-12 13:36:30.397 CST [3583] LOG:  redo starts at 0/1992898
+2022-01-12 13:36:30.554 CST [3583] LOG:  invalid record length at 0/19928D0: wanted 24, got 0
+2022-01-12 13:36:30.554 CST [3583] LOG:  redo done at 0/1992898
+2022-01-12 13:36:30.818 CST [3567] LOG:  database system is ready to accept connections
+2022-01-12 16:26:35.474 CST [2888] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-12 16:26:35.578 CST [2888] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-12 16:26:35.579 CST [2888] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-12 16:26:35.633 CST [2888] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-12 16:26:38.039 CST [2891] LOG:  database system was interrupted; last known up at 2022-01-12 13:36:30 CST
+2022-01-12 16:26:40.988 CST [2891] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-12 16:26:41.053 CST [2891] LOG:  redo starts at 0/1992948
+2022-01-12 16:26:41.053 CST [2891] LOG:  invalid record length at 0/1992980: wanted 24, got 0
+2022-01-12 16:26:41.053 CST [2891] LOG:  redo done at 0/1992948
+2022-01-12 16:26:41.326 CST [2888] LOG:  database system is ready to accept connections
+2022-01-13 17:13:54.382 CST [3616] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-13 17:13:54.657 CST [3616] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-13 17:13:54.657 CST [3616] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-13 17:13:54.757 CST [3616] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-13 17:13:55.890 CST [3618] LOG:  database system was interrupted; last known up at 2022-01-12 16:26:41 CST
+2022-01-13 17:13:57.937 CST [3618] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-13 17:13:58.087 CST [3618] LOG:  redo starts at 0/19929F8
+2022-01-13 17:13:58.087 CST [3618] LOG:  invalid record length at 0/1992A30: wanted 24, got 0
+2022-01-13 17:13:58.087 CST [3618] LOG:  redo done at 0/19929F8
+2022-01-13 17:13:58.239 CST [3616] LOG:  database system is ready to accept connections
+2022-01-14 15:30:50.924 CST [3395] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-14 15:30:51.193 CST [3395] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-14 15:30:51.193 CST [3395] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-14 15:30:51.218 CST [3395] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-14 15:30:53.243 CST [3398] LOG:  database system was interrupted; last known up at 2022-01-13 17:13:58 CST
+2022-01-14 15:30:57.996 CST [3398] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-14 15:30:58.129 CST [3398] LOG:  redo starts at 0/1992AA8
+2022-01-14 15:30:58.129 CST [3398] LOG:  invalid record length at 0/1992AE0: wanted 24, got 0
+2022-01-14 15:30:58.129 CST [3398] LOG:  redo done at 0/1992AA8
+2022-01-14 15:30:58.362 CST [3395] LOG:  database system is ready to accept connections
