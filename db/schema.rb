@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_30_024608) do
+ActiveRecord::Schema.define(version: 2022_01_19_013058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,32 @@ ActiveRecord::Schema.define(version: 2021_12_30_024608) do
     t.string "description"
   end
 
+  create_table "image_categories", force: :cascade do |t|
+    t.integer "story_text_id"
+    t.integer "category_id"
+    t.integer "image_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "image_comments", force: :cascade do |t|
+    t.integer "comment_id"
+    t.integer "image_id"
+    t.integer "story_text_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "url"
+    t.string "name"
+    t.string "description"
+    t.integer "like"
+    t.integer "dislike"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "story_text_categories", force: :cascade do |t|
     t.integer "story_text_id"
     t.integer "category_id"
@@ -54,6 +80,13 @@ ActiveRecord::Schema.define(version: 2021_12_30_024608) do
     t.integer "user_id"
   end
 
+  create_table "story_text_images", force: :cascade do |t|
+    t.integer "story_id"
+    t.integer "image_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "story_texts", force: :cascade do |t|
     t.float "score"
     t.integer "dislike"
@@ -63,6 +96,7 @@ ActiveRecord::Schema.define(version: 2021_12_30_024608) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "status"
+    t.string "text_content"
   end
 
   create_table "user_categories", force: :cascade do |t|
@@ -79,6 +113,14 @@ ActiveRecord::Schema.define(version: 2021_12_30_024608) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "story_text_id"
+  end
+
+  create_table "user_images", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "image_id"
+    t.integer "story_text_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "user_story_texts", force: :cascade do |t|

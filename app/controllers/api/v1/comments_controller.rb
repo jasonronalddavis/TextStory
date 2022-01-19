@@ -19,7 +19,7 @@ class Api::V1::CommentsController < ApplicationController
     private
     
         def category_params 
-        params.require(:comment).permit( :id, :name, :category_id, :story_text_id, :user_id)
+        params.require(:comment).permit( :name, :category_id, :story_text_id, :user_id, :image_id)
         end
 
 

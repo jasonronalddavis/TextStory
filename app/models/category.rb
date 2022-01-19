@@ -13,6 +13,7 @@ class Category < ApplicationRecord
     has_many :users, through: :user_story_texts
 
 
-   
+   has_many :image_categories
+   has_many :images, through: :image_categories
    
 end

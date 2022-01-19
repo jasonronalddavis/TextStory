@@ -6,8 +6,20 @@ rails g resource StoryText score:float dislike:integer like:integer description:
 
 rails g resource Category name:string description:string  --no-test-framework
 
+rails g resource Image url:string name:string description:string like:integer dislike:integer   --no-test-framework
 
 
+
+
+
+
+rails g resource ImageCategory story_text_id:integer category_id:integer image_id:integer  --no-test-framework
+
+rails g resource ImageComment comment_id:integer image_id:integer story_text_id:integer --no-test-framework
+
+rails g resource StoryTextImage story_id:integer image_id:integer  --no-test-framework
+
+rails g resource UserImage user_id:integer image_id:integer story_text_id:integer --no-test-framework
 
 rails g migration UserStoryText user_id:integer story_text_id:integer  --no-test-framework
 

@@ -11,4 +11,9 @@ class Comment < ApplicationRecord
 
     has_many :story_text_comments
     has_many :story_texts, through: :story_text_comments 
+
+    has_many :image_comments
+    has_many :images, through: :image_comments
+
+
 end

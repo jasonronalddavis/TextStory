@@ -12,6 +12,9 @@ has_many :user_comments
 has_many :comments, through: :user_comments 
 has_many :story_text_comments 
 has_many :comments, through: :story_text_comments 
+has_many :user_images 
+has_many :images, through: :user_images 
+
 
 validates :name, uniqueness: true
 end

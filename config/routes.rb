@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :user_images
+  resources :story_text_images
+  resources :image_comments
+  resources :image_categories
+  resources :images
   namespace :api do
    namespace :v1 do
 
@@ -60,18 +65,14 @@ post 'login', to: 'users#login'
     resources :categories
   end
 
-  resources :story_texts do
+  resources :images
 
-  resources :users
-  resources :categories
-  end
+  resources :story_texts 
 
-  resources :categories do
 
-  resources :users
-  resources :story_texts
+  resources :categories 
  
-  end
+ 
 end
 end
 end
