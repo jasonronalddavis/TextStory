@@ -18,13 +18,11 @@ class Api::V1::StoryTextsController < ApplicationController
             @story_text = StoryText.find_by_id(params[:id])
             render json: @story_text
          end
-     end
-
+   
 
 
 
      def create
-
         binding.pry
        if session[:user_id]
         @user = User.find(session[:user_id])
@@ -40,15 +38,15 @@ class Api::V1::StoryTextsController < ApplicationController
 
 
        
-        if @story_text.save
-          render json: @story_text, status: :created
-        else
-            render json: {error: "invalid name or password"}
-        end
-    elsif session[:user_id] = nil
-        render json: {error: "must be logged in"}  
+    #     if @story_text.save
+    #       render json: @story_text, status: :created
+    #     else
+    #         render json: {error: "invalid name or password"}
+    #     end
+    # elsif session[:user_id] = nil
+    #     render json: {error: "must be logged in"}  
     end
-
+end
 
 
 
@@ -56,8 +54,9 @@ class Api::V1::StoryTextsController < ApplicationController
     private
     
         def story_text_params 
-        params.require(:story_text).permit(:name, :description, :id, :text_content, :image_ids, category_ids, :comment_ids, :user_ids, :user_id)    
+        params.require(:story_text).permit(:name, :description, :id, :text_content, :image_id, :user_id)    
     end
     
 
 end
+ 
