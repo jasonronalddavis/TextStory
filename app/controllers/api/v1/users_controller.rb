@@ -13,8 +13,6 @@ class Api::V1::UsersController < ApplicationController
 
 
 
-
-
      def show
         if current_user
         render json: current_user, status: :ok

@@ -12,8 +12,6 @@ class Api::V1::StoryTextsController < ApplicationController
 
 
 
-
-
         def show
             @story_text = StoryText.find_by_id(params[:id])
             render json: @story_text
@@ -23,10 +21,10 @@ class Api::V1::StoryTextsController < ApplicationController
 
 
      def create
-        binding.pry
+       # binding.pry
        if session[:user_id]
         @user = User.find(session[:user_id])
-        @images = params[:image_ids]
+        @images = params[:image_file]
         @categories = params[:category_ids]
         @i_array = Image.all.find(@images)
         @c_array = Category.all.find(@categories)
@@ -54,7 +52,7 @@ end
     private
     
         def story_text_params 
-        params.require(:story_text).permit(:name, :description, :id, :text_content, :image_id, :user_id)    
+        params.require(:story_text).permit(:name, :description, :id, :text_content, :categories, :user_id)    
     end
     
 
