@@ -60,6 +60,11 @@ post 'story_texts/create', to: 'story_texts#create'
 
 post 'login', to: 'users#login'
 
+delete 'users/delete', to: 'users#destroy'
+
+
+ 
+
 
   resources :users do
     resources :story_texts

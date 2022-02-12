@@ -36,7 +36,14 @@ class Api::V1::UsersController < ApplicationController
         end
     end
 
-
+    def destroy 
+        binding.pry
+        @user = User.find_by(name: params[:name])
+@user.delete
+        render json: {
+          notice: "Not logged in"
+        }
+      end
 
 
 

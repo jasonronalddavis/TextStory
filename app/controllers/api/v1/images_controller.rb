@@ -1,4 +1,4 @@
-class ImagesController < ApplicationController
+class Api::V1::ImagesController < ApplicationController
 
 
     
@@ -25,7 +25,7 @@ class ImagesController < ApplicationController
 
 
      def create
-        binding.pry
+     
        if session[:user_id]
         @user = User.find(session[:user_id])
         @image = Image.new(story_text_params)
@@ -46,8 +46,8 @@ class ImagesController < ApplicationController
 
     private
     
-        def story_text_params 
-        params.require(:image).permit(:name, :id, :description, :url, :story_text_ids, :user_ids, :category_ids, :comment_ids)    
+        def image_params 
+        params.require(:image).permit(:name, :url)    
     end
 
 

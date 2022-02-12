@@ -21,28 +21,22 @@ class Api::V1::StoryTextsController < ApplicationController
 
 
      def create
-       # binding.pry
+     # binding.pry
        if session[:user_id]
         @user = User.find(session[:user_id])
-        @images = params[:image_file]
-        @categories = params[:category_ids]
-        @i_array = Image.all.find(@images)
-        @c_array = Category.all.find(@categories)
+        @image = Image.new(url: params[:image_file])
+        @category = Category.find_by_name(params[:categories])
         @story_text = StoryText.new(story_text_params)
-
-
-        @c_array.each{|c| @story_text.categories << c}  
-        @i_array.each{|i| @story_text.images << i} 
-
-
-       
-    #     if @story_text.save
-    #       render json: @story_text, status: :created
-    #     else
-    #         render json: {error: "invalid name or password"}
-    #     end
-    # elsif session[:user_id] = nil
-    #     render json: {error: "must be logged in"}  
+        @story_text.categories << @category
+        @story_text.images << @image
+        @user.story_texts << @story_text
+         if @story_text.save
+           render json: @story_text, status: :created
+         else
+             render json: {error: "invalid name or password"}
+         end
+     elsif session[:user_id] = nil
+         render json: {error: "must be logged in"}  
     end
 end
 
@@ -52,7 +46,7 @@ end
     private
     
         def story_text_params 
-        params.require(:story_text).permit(:name, :description, :id, :text_content, :categories, :user_id)    
+        params.require(:story_text).permit(:name, :id, :description, :text_content, :user_id)    
     end
     
 
