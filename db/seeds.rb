@@ -11,7 +11,7 @@
  user1 = User.create(:name => "Guest", :password => "muh")
 
 
- user2 = User.create(:name => "JD", :password => "barnes")
+ user2 = User.create(:name => "Jerry", :password => "barnes")
 
  user3 = User.create(:name => "Barnes", :password => "barnes")
 

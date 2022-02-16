@@ -1,4 +1,4 @@
-class UserStoryTexts < ActiveRecord::Migration[6.1]
+class CreateUserStoryTexts < ActiveRecord::Migration[6.1]
   def change
     create_table :user_story_texts do |t|
       t.integer :user_id 
