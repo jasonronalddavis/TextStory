@@ -36,7 +36,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'devise'
   gem 'flash_rails_messages'
   gem 'pry'
   gem 'bcrypt'

@@ -3,7 +3,9 @@ class Api::V1::UsersController < ApplicationController
 
 
     def index
+   #binding.pry
         users = User.all
+      
         render json: UserSerializer.new(users)
     #  binding.pry 
     end
@@ -14,6 +16,7 @@ class Api::V1::UsersController < ApplicationController
 
 
      def show
+  
         if current_user
         render json: current_user, status: :ok
         else

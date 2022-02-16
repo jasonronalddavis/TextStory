@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-has_secure_password
 
 
 has_many :user_story_texts
@@ -16,5 +15,5 @@ has_many :user_images
 has_many :images, through: :user_images 
 
 
-validates :name, uniqueness: true
+#validates :name, uniqueness: true
 end

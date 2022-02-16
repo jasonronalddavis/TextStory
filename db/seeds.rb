@@ -36,6 +36,7 @@ sciFi = Category.create(name: "SCI Fi")
 
  action = Category.create(name: "Action")
 
+ Category.create(name: "Fantasy")
 
 
 

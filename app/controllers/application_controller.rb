@@ -8,8 +8,7 @@ rescue_from ActiveRecord::RecordNotFound, with:
 rescue_from ActiveRecord::RecordInvalid, with: :invalid_record
 
 
-    def welcome 
-        
+    def welcome    
         user = User.new
         story_texts = StoryText.all
         @stories = StoryText.all
@@ -28,8 +27,7 @@ def invalid_record(invalid)
 render json: invalid.record.errors, status:
 :unprocessable_entity
 end
-
-            
+           
 
                  def logged_in?
                     !!current_user

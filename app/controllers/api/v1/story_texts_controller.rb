@@ -30,6 +30,7 @@ class Api::V1::StoryTextsController < ApplicationController
         @story_text.categories << @category
         @story_text.images << @image
         @user.story_texts << @story_text
+        @user.images << @image
          if @story_text.save
            render json: @story_text, status: :created
          else

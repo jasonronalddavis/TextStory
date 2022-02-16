@@ -3,9 +3,10 @@ class Api::V1::ImagesController < ApplicationController
 
     
     def index
-        @image = Image.all
-        render json: ImageSerializer.new(@image)
-    #  binding.pry 
+        @images = Image.all
+        #binding.pry
+        render json: ImageSerializer.new(@images)
+
     end
 
 

@@ -957,3 +957,82 @@
 2022-02-12 00:30:01.645 CST [3468] LOG:  invalid record length at 0/26413B8: wanted 24, got 0
 2022-02-12 00:30:01.645 CST [3468] LOG:  redo done at 0/2641380
 2022-02-12 00:30:02.488 CST [3461] LOG:  database system is ready to accept connections
+2022-02-14 00:07:28.974 CST [3495] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-02-14 00:07:29.266 CST [3495] LOG:  listening on IPv6 address "::1", port 5432
+2022-02-14 00:07:29.266 CST [3495] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-02-14 00:07:29.466 CST [3495] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-02-14 00:07:33.403 CST [3502] LOG:  database system was interrupted; last known up at 2022-02-12 05:50:20 CST
+2022-02-14 00:07:37.258 CST [3502] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-02-14 00:07:37.652 CST [3502] LOG:  redo starts at 0/99E4180
+2022-02-14 00:07:37.652 CST [3502] LOG:  invalid record length at 0/99E4268: wanted 24, got 0
+2022-02-14 00:07:37.652 CST [3502] LOG:  redo done at 0/99E4230
+2022-02-14 00:07:38.379 CST [3495] LOG:  database system is ready to accept connections
+2022-02-15 21:43:26.920 CST [23739] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:44:27.198 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:44:40.685 CST [23781] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:45:11.303 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:45:26.029 CST [23807] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:46:26.092 CST [23838] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:47:11.485 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:50:10.966 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:50:28.086 CST [23896] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:51:27.378 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:54:11.241 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:54:41.773 CST [23927] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:56:11.291 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:56:48.063 CST [23939] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:57:22.796 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:57:37.851 CST [23944] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:58:11.279 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 21:59:11.539 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 22:02:11.056 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 22:05:11.304 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 22:08:11.348 CST [3508] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-15 22:11:05.835 CST [3495] LOG:  received smart shutdown request
+2022-02-15 22:11:06.061 CST [3495] LOG:  background worker "logical replication launcher" (PID 3510) exited with exit code 1
+2022-02-15 22:11:06.061 CST [3505] LOG:  shutting down
+2022-02-15 22:11:06.209 CST [3495] LOG:  database system is shut down
+2022-02-15 22:57:48.209 CST [3638] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-02-15 22:57:50.240 CST [3638] LOG:  listening on IPv6 address "::1", port 5432
+2022-02-15 22:57:50.240 CST [3638] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-02-15 22:57:50.680 CST [3638] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-02-15 22:57:59.790 CST [3663] LOG:  database system was shut down at 2022-02-15 22:11:06 CST
+2022-02-15 22:58:02.988 CST [3638] LOG:  database system is ready to accept connections
+2022-02-16 00:10:48.244 CST [4820] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:10:48.683 CST [4824] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:10:49.161 CST [4825] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:10:50.111 CST [4826] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:10:50.382 CST [4827] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:10:51.814 CST [4828] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:10:51.904 CST [4829] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:10:52.046 CST [4830] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:05.452 CST [4835] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:05.458 CST [4836] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:05.468 CST [4837] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:05.484 CST [4838] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:07.380 CST [4840] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:08.002 CST [4842] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:08.505 CST [4843] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:16.948 CST [4847] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:16.961 CST [4848] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:16.977 CST [4849] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:17.004 CST [4850] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:17.603 CST [4851] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:19.840 CST [4854] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:11:20.560 CST [4856] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:19:39.977 CST [4986] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:50:47.049 CST [9259] FATAL:  database "StoryText_development" does not exist
+2022-02-16 00:59:41.631 CST [9683] ERROR:  database "StoryText_development" already exists
+2022-02-16 00:59:41.631 CST [9683] STATEMENT:  CREATE DATABASE "StoryText_development" ENCODING = 'unicode'
+2022-02-16 00:59:41.815 CST [9684] ERROR:  database "StoryText_test" already exists
+2022-02-16 00:59:41.815 CST [9684] STATEMENT:  CREATE DATABASE "StoryText_test" ENCODING = 'unicode'
+2022-02-16 01:22:42.773 CST [10236] ERROR:  database "StoryText_development" already exists
+2022-02-16 01:22:42.773 CST [10236] STATEMENT:  CREATE DATABASE "StoryText_development" ENCODING = 'unicode'
+2022-02-16 01:22:42.946 CST [10237] ERROR:  database "StoryText_test" already exists
+2022-02-16 01:22:42.946 CST [10237] STATEMENT:  CREATE DATABASE "StoryText_test" ENCODING = 'unicode'
+2022-02-16 02:02:25.990 CST [13839] ERROR:  database "StoryText_development" already exists
+2022-02-16 02:02:25.990 CST [13839] STATEMENT:  CREATE DATABASE "StoryText_development" ENCODING = 'unicode'
+2022-02-16 02:02:26.059 CST [13840] ERROR:  database "StoryText_test" already exists
+2022-02-16 02:02:26.059 CST [13840] STATEMENT:  CREATE DATABASE "StoryText_test" ENCODING = 'unicode'
+2022-02-16 02:03:14.467 CST [13895] FATAL:  database "StoryText_development" does not exist
+2022-02-16 02:17:28.947 CST [14185] FATAL:  role "StoryText" does not exist
