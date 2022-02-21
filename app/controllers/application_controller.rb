@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::API
 include ::ActionController::Cookies
 
+helper_method :current_user, :logged_in?
 
 
 rescue_from ActiveRecord::RecordNotFound, with:

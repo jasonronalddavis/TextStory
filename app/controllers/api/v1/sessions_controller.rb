@@ -1,8 +1,6 @@
 class Api::V1::SessionsController < ApplicationController
 
 
-
-
   def create
   @user = User.find_by_name(params[:name])
  if @user && @user.authenticate(params[:password])
@@ -22,6 +20,7 @@ class Api::V1::SessionsController < ApplicationController
       @user = User.find_by(name: params[:name])
       if @user && @user.authenticate(params[:password])
           token = encode_token({user_id: @user.id})
+         
           render json: {user: @user, token: token}
       else
           render json: {error: "Invalid username or password"}
@@ -39,9 +38,24 @@ end
 end
 
 
+
+
+def get_user_stories
+  binding.pry
+  user = current_user
+  @user_story_texts = user.story_texts
+  @user_story_images = @user_story_texts.map {|s| s.images}
+end
+
+
+
+
     def get_current_user
       if logged_in?
-       # binding.pry
+        #binding.pry
+        @user =  current_user
+        @user_story_texts = @user.story_texts
+        @user_story_images = @user_story_texts.map {|s| s.images}
         render json: UserSerializer.new(current_user)
       else
         render json: {
@@ -50,6 +64,10 @@ end
       end
     end
    
+
+
+
+
 
 
     def destroy 

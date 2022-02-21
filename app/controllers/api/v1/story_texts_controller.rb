@@ -2,9 +2,11 @@ class Api::V1::StoryTextsController < ApplicationController
     
     
     def index
+      user =  current_user
         @story_text = StoryText.all
+       
         render json: StoryTextSerializer.new(@story_text)
-    #  binding.pry 
+    
     end
 
 

@@ -52,18 +52,16 @@ post 'signup', to: "users#create"
 get 'login'
 post 'login', to: 'sessions#create'
 get'get_current_user', to: 'sessions#get_current_user'
+get "get_user_stories", to: 'sessions#get_user_stories'
 delete 'logout', to: 'sessions#destroy'
 
 
 get 'story_texts/create', to: 'story_texts#create'
 post 'story_texts/create', to: 'story_texts#create'
 
-post 'login', to: 'users#login'
 
 delete 'users/delete', to: 'users#destroy'
 
-
- 
 
 
   resources :users do

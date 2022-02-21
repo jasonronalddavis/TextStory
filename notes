@@ -43,6 +43,9 @@ rails g controller TextStory new create show edit update destroy index --no-test
 
 rails g controller api/v1/application --no-test-framework
 
+rails g controller api/v1/users user_story_attr --no-test-framework
+
+
 
 @amy = User.new(name: "amy", password: "barnes")
 

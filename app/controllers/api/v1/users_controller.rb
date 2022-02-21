@@ -3,7 +3,7 @@ class Api::V1::UsersController < ApplicationController
 
 
     def index
-   #binding.pry
+  #binding.pry
         users = User.all
       
         render json: UserSerializer.new(users)
@@ -26,6 +26,8 @@ class Api::V1::UsersController < ApplicationController
      end
 
 
+
+ 
 
 
      def create

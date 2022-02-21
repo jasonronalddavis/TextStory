@@ -1054,3 +1054,36 @@
 2022-02-16 12:22:12.079 CST [24813] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2022-02-16 12:22:13.054 CST [24816] LOG:  database system was shut down at 2022-02-16 12:22:07 CST
 2022-02-16 12:22:13.191 CST [24813] LOG:  database system is ready to accept connections
+2022-02-17 03:55:25.641 CST [24820] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-17 10:28:25.048 CST [24820] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-19 03:44:26.754 CST [54242] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-19 03:45:15.565 CST [54270] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-20 00:27:11.519 CST [60892] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-20 00:27:52.143 CST [60933] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-20 00:33:57.527 CST [61279] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-20 00:35:05.440 CST [61335] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-20 00:35:20.954 CST [61362] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-20 00:37:32.921 CST [24820] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-20 00:41:33.234 CST [24820] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-20 17:19:42.467 CST [4857] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-02-20 17:19:42.614 CST [4857] LOG:  listening on IPv6 address "::1", port 5432
+2022-02-20 17:19:42.614 CST [4857] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-02-20 17:19:42.687 CST [4857] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-02-20 17:19:43.410 CST [4858] LOG:  database system was interrupted; last known up at 2022-02-16 15:23:03 CST
+2022-02-20 17:19:44.641 CST [4858] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-02-20 17:19:44.726 CST [4858] LOG:  redo starts at 0/D69F7C0
+2022-02-20 17:19:44.726 CST [4858] LOG:  invalid record length at 0/D69F8A8: wanted 24, got 0
+2022-02-20 17:19:44.726 CST [4858] LOG:  redo done at 0/D69F870
+2022-02-20 17:19:44.854 CST [4857] LOG:  database system is ready to accept connections
+2022-02-21 00:09:35.512 CST [2876] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-02-21 00:09:35.643 CST [2876] LOG:  listening on IPv6 address "::1", port 5432
+2022-02-21 00:09:35.643 CST [2876] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-02-21 00:09:35.918 CST [2876] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-02-21 00:09:39.191 CST [2879] LOG:  database system was interrupted; last known up at 2022-02-20 17:19:44 CST
+2022-02-21 00:09:45.243 CST [2879] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-02-21 00:09:45.313 CST [2879] LOG:  redo starts at 0/D69F920
+2022-02-21 00:09:45.313 CST [2879] LOG:  invalid record length at 0/D69F958: wanted 24, got 0
+2022-02-21 00:09:45.313 CST [2879] LOG:  redo done at 0/D69F920
+2022-02-21 00:09:45.440 CST [2876] LOG:  database system is ready to accept connections
+2022-02-21 00:16:56.670 CST [2887] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-21 00:17:19.317 CST [2994] LOG:  using stale statistics instead of current ones because stats collector is not responding
