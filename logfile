@@ -1087,3 +1087,11 @@
 2022-02-21 00:09:45.440 CST [2876] LOG:  database system is ready to accept connections
 2022-02-21 00:16:56.670 CST [2887] LOG:  using stale statistics instead of current ones because stats collector is not responding
 2022-02-21 00:17:19.317 CST [2994] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-21 18:51:35.860 CST [10060] ERROR:  could not create unique index "index_users_on_email"
+2022-02-21 18:51:35.860 CST [10060] DETAIL:  Key (email)=() is duplicated.
+2022-02-21 18:51:35.860 CST [10060] STATEMENT:  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+2022-02-21 19:02:52.491 CST [10284] ERROR:  column "email" of relation "users" does not exist
+2022-02-21 19:02:52.491 CST [10284] STATEMENT:  ALTER TABLE "users" DROP COLUMN "email"
+2022-02-21 19:04:47.583 CST [10368] ERROR:  could not create unique index "index_users_on_email"
+2022-02-21 19:04:47.583 CST [10368] DETAIL:  Key (email)=() is duplicated.
+2022-02-21 19:04:47.583 CST [10368] STATEMENT:  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")

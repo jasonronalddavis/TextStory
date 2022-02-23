@@ -74,6 +74,32 @@ pg_ctl -D /usr/local/var/postgres_dev -l logfile s
 rails s -p 3001
 
 
+before_action :authenticate_member!
+
+member_signed_in?
+
+current_member
+
+member_session
+
+
+class ApplicationController < ActionController::Base
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) << :username
+  end
+end
+
+
+def configure_permitted_parameters
+  devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:username, :email) }
+end
+
+
+
 
 //https://docs.google.com/spreadsheets/d/1a-hlF6DurA_GHxcTUjNiFl4_Oju7LAtRGY-lhvV54bQ/edit#gid=1196678344
 

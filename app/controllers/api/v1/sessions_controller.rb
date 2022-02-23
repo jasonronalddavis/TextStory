@@ -3,8 +3,9 @@ class Api::V1::SessionsController < ApplicationController
 
   def create
   @user = User.find_by_name(params[:name])
- if @user && @user.authenticate(params[:password])
-     session[:user_id] = @user.id
+  #binding.pry
+ if @user.valid_password?(params[:password])
+     sign_in(@user)
 
      render json: UserSerializer.new(@user), status: :ok
     else
@@ -17,21 +18,22 @@ class Api::V1::SessionsController < ApplicationController
 
 
     def login
-      @user = User.find_by(name: params[:name])
-      if @user && @user.authenticate(params[:password])
-          token = encode_token({user_id: @user.id})
-         
-          render json: {user: @user, token: token}
+      @user = find_current_user
+      if @user 
+          render json: {user: @user, message: "signe_in"}
       else
           render json: {error: "Invalid username or password"}
       end  
       end
 
+
+
+
 def signup
   @user = User.find_by(name: params[:name])
   if @user
-  token = encode_token({user_id: @user.id})
-  render json: {user: @user, token: token}
+
+  render json: {user: @user, message: "signe_in"}
 else
   render json: {error: "Invalid username or password"}
 end  
@@ -40,23 +42,11 @@ end
 
 
 
-def get_user_stories
-  binding.pry
-  user = current_user
-  @user_story_texts = user.story_texts
-  @user_story_images = @user_story_texts.map {|s| s.images}
-end
-
-
-
-
     def get_current_user
-      if logged_in?
-        #binding.pry
-        @user =  current_user
-        @user_story_texts = @user.story_texts
-        @user_story_images = @user_story_texts.map {|s| s.images}
-        render json: UserSerializer.new(current_user)
+        @user = current_api_v1_user
+        sign_in(@user)
+        if signed_in?(@user)
+        render json: UserSerializer.new( @user)
       else
         render json: {
           error: "Not logged in"
@@ -71,7 +61,8 @@ end
 
 
     def destroy 
-      session.clear
+    #  binding.pry
+      sign_out(current_api_v1_user)
       render json: {
         notice: "Not logged in"
       }

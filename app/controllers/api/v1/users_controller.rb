@@ -17,7 +17,7 @@ class Api::V1::UsersController < ApplicationController
 
      def show
   
-        if current_user
+        if current_api_v1_user
         render json: current_user, status: :ok
         else
             render json: "Not authenticated", status:
@@ -27,19 +27,20 @@ class Api::V1::UsersController < ApplicationController
 
 
 
- 
 
 
      def create
-      #  binding.pry
+#binding.pry
         @user = User.new(user_params)
         if @user.save
-            session[:user_id] = @user.id
-          render json: @user, status: :created
+          sign_in(@user)
+   render json: @user, status: :created
         else
             render json: {error: "invalid name or password"}
         end
     end
+
+
 
     def destroy 
         binding.pry

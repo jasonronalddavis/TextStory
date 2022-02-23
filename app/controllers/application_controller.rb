@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
 include ::ActionController::Cookies
-
-helper_method :current_user, :logged_in?
+helper_method :find_current_user
+before_action :configure_permitted_parameters, if: :devise_controller?
 
 
 rescue_from ActiveRecord::RecordNotFound, with:
@@ -9,16 +9,17 @@ rescue_from ActiveRecord::RecordNotFound, with:
 rescue_from ActiveRecord::RecordInvalid, with: :invalid_record
 
 
-    def welcome    
-        user = User.new
+    def welcome
+        
+        user = current_api_v1_user
         story_texts = StoryText.all
         @stories = StoryText.all
            render json: user
         end
 
-def current_user
-User.find_by(id: session[:user_id])
-end
+ def find_current_user
+ current_api_v1_user
+ end
 
 def record_not_found(errors)
 render json: errors.message, status: :not_found
@@ -30,13 +31,6 @@ render json: invalid.record.errors, status:
 end
            
 
-                 def logged_in?
-                    !!current_user
-                 end
             
 
-def authorized?
-render json: { message: "please log in"}, status: :unauthorized unless
-logged_in?
-end 
 end
