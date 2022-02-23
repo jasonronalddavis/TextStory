@@ -16,11 +16,11 @@ class Api::V1::SessionsController < ApplicationController
 
 
 
-
     def login
-      @user = find_current_user
+      @user = current_api_v1_user
       if @user 
-          render json: {user: @user, message: "signe_in"}
+        render json: UserSerializer.new(@user)
+       #   render json: {user: @user, message: "signed_in"}
       else
           render json: {error: "Invalid username or password"}
       end  
@@ -28,13 +28,14 @@ class Api::V1::SessionsController < ApplicationController
 
 
 
-
+#ROUTED TO USERS CREATED
 def signup
   @user = User.find_by(name: params[:name])
   if @user
-
-  render json: {user: @user, message: "signe_in"}
-else
+  #  token = encode_token({user_id: @user.id})
+   # render json: {user: @user, token: token}
+   render json: UserSerializer.new(@users) 
+  else
   render json: {error: "Invalid username or password"}
 end  
 end
@@ -42,12 +43,14 @@ end
 
 
 #//--> STUCK HERE. USER KEEPS SIGNING OUT ON REFRESH <-----
-
+#
     def get_current_user
+ 
         @user = current_api_v1_user
         sign_in(@user)
-        if signed_in?(@user)
+        if @user
         render json: UserSerializer.new( @user)
+       # binding.pry
       else
         render json: {
           error: "Not logged in"
@@ -55,8 +58,6 @@ end
       end
     end
    
-
-
 
 
 

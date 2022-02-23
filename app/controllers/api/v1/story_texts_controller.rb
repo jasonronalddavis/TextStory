@@ -1,11 +1,10 @@
 class Api::V1::StoryTextsController < ApplicationController
-    
-    
-    def index
+
+
+
+    def index   
         @story_text = StoryText.all
-       
         render json: StoryTextSerializer.new(@story_text)
-    
     end
 
 
@@ -25,6 +24,7 @@ class Api::V1::StoryTextsController < ApplicationController
      # binding.pry
        if session[:user_id]
         @user = User.find(session[:user_id])
+        #SETTING IMAGE INSTANCE BY URL NAME AND SAVING IT TO USER RELATION USER.IMAGES
         @image = Image.new(url: params[:image_file])
         @category = Category.find_by_name(params[:categories])
         @story_text = StoryText.new(story_text_params)
@@ -44,8 +44,9 @@ end
 
 
 
-
     private
+
+
     
         def story_text_params 
         params.require(:story_text).permit(:name, :id, :description, :text_content, :user_id)    

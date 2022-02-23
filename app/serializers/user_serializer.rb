@@ -5,7 +5,7 @@ class UserSerializer
 
   
   has_many :user_story_texts
-  has_many :story_texts, through: :user_story_texts
+  has_many :story_texts, serializer: StoryTextSerializer
   has_many :user_categories
   has_many :categories, through: :user_categories 
   has_many :story_text_categories

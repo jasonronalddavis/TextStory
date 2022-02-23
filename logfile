@@ -1095,3 +1095,5 @@
 2022-02-21 19:04:47.583 CST [10368] ERROR:  could not create unique index "index_users_on_email"
 2022-02-21 19:04:47.583 CST [10368] DETAIL:  Key (email)=() is duplicated.
 2022-02-21 19:04:47.583 CST [10368] STATEMENT:  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+2022-02-23 03:14:14.848 CST [27188] ERROR:  column users.authentication_token does not exist at character 37
+2022-02-23 03:14:14.848 CST [27188] STATEMENT:  SELECT "users".* FROM "users" WHERE "users"."authentication_token" = $1 ORDER BY "users"."id" ASC LIMIT $2
