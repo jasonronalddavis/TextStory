@@ -41,6 +41,7 @@ end
 
 
 
+#//--> STUCK HERE. USER KEEPS SIGNING OUT ON REFRESH <-----
 
     def get_current_user
         @user = current_api_v1_user
