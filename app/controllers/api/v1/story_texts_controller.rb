@@ -22,12 +22,14 @@ class Api::V1::StoryTextsController < ApplicationController
 
      def create
      # binding.pry
-       if session[:user_id]
-        @user = User.find(session[:user_id])
-        #SETTING IMAGE INSTANCE BY URL NAME AND SAVING IT TO USER RELATION USER.IMAGES
+       if current_api_v1_user
+        @user = current_api_v1_user
         @image = Image.new(url: params[:image_file])
+        #SETTING IMAGE INSTANCE BY URL NAME AND SAVING IT TO USER RELATION USER.IMAGES
         @category = Category.find_by_name(params[:categories])
+         #ASSIGNING CATEGORY INSTANCE BY NAME AND SAVING IT TO USER RELATION USER.CATEGORIES
         @story_text = StoryText.new(story_text_params)
+        #ASSIGNING STORYTEXT INSTANCE BY NAME AND SAVING IT TO USER RELATION USER.STORYTEXT
         @story_text.categories << @category
         @story_text.images << @image
         @user.story_texts << @story_text
@@ -37,7 +39,7 @@ class Api::V1::StoryTextsController < ApplicationController
          else
              render json: {error: "invalid name or password"}
          end
-     elsif session[:user_id] = nil
+     elsif !current_api_v1_user
          render json: {error: "must be logged in"}  
     end
 end
@@ -46,8 +48,6 @@ end
 
     private
 
-
-    
         def story_text_params 
         params.require(:story_text).permit(:name, :id, :description, :text_content, :user_id)    
     end
