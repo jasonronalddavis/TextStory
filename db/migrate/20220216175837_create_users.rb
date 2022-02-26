@@ -4,8 +4,6 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.float :total_score
       t.string :name
       t.string :bio
-      t.string :password_digest
-
       t.timestamps
     end
   end

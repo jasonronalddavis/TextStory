@@ -1,18 +1,18 @@
 class Api::V1::SessionsController < ApplicationController
 
+#SWITCHING FROM CUSTOM AUTH TO DEVISE. STILL LEARNING DEVISE
+
 
   def create
   @user = User.find_by_name(params[:name])
   #binding.pry
  if @user.valid_password?(params[:password])
      sign_in(@user)
-
      render json: UserSerializer.new(@user), status: :ok
     else
       "muhhh" 
     end
     end
-
 
 
 
@@ -28,7 +28,7 @@ class Api::V1::SessionsController < ApplicationController
 
 
 
-#ROUTED TO USERS CREATED
+#ROUTED TO USERS CREATE
 def signup
   @user = User.find_by(name: params[:name])
   if @user
@@ -42,10 +42,7 @@ end
 
 
 
-#//--> STUCK HERE. USER KEEPS SIGNING OUT ON REFRESH <-----
-#
     def get_current_user
- 
         @user = current_api_v1_user
         sign_in(@user)
         if @user
@@ -71,6 +68,7 @@ end
     end
     
 
+    #MAY NOT USE SANITIZED SESSION PARAMS. LEAVING FOR POTENTIAL USE
     def session_params 
       # binding.pry
       params.require(:session).permit(:user_id, :id, :password, :name)   

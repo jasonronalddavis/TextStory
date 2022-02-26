@@ -100,6 +100,17 @@ end
 
 
 
+records = {
+  1: {
+    "some_attribute": "some_value"
+  },
+  2: {
+    "some_attribute": "some_value"
+  }
+}
+
+Model.update(records.keys, records.values)
+
 
 //https://docs.google.com/spreadsheets/d/1a-hlF6DurA_GHxcTUjNiFl4_Oju7LAtRGY-lhvV54bQ/edit#gid=1196678344
 

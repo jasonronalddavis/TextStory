@@ -13,7 +13,7 @@
 
  user2 = User.create(:name => "Jerry", :password => "barnes")
 
- user3 = User.create(:name => "Barnes", :password => "barnes")
+ user3 = User.create(:name => "JD", :password => "barnes")
 
 
 
@@ -62,7 +62,7 @@ comedy = Category.find_by_name("Comedy")
 
 something_corny = StoryText.find_by_name("Something Corny")
 
-user = User.find_by_name("Guest")
+user = User.find_by_name("JD")
 
 user1.story_texts << story
 user2.story_texts << story_3

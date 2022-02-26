@@ -11,11 +11,9 @@ class Api::V1::UsersController < ApplicationController
 
 
 
-
-
      def show
         if current_api_v1_user
-        render json: current_user, status: :ok
+        render json: current_api_v1_user, status: :ok
         else
             render json: "Not authenticated", status:
             :unauthorized
@@ -24,8 +22,7 @@ class Api::V1::UsersController < ApplicationController
 
 
 
-
-
+#ROUTED FROM SESSIONS SIGN IN
      def create
 #binding.pry
         @user = User.new(user_params)
@@ -47,7 +44,6 @@ class Api::V1::UsersController < ApplicationController
           notice: "Not logged in"
         }
       end
-
 
 
     private

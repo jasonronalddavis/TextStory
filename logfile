@@ -1097,3 +1097,57 @@
 2022-02-21 19:04:47.583 CST [10368] STATEMENT:  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
 2022-02-23 03:14:14.848 CST [27188] ERROR:  column users.authentication_token does not exist at character 37
 2022-02-23 03:14:14.848 CST [27188] STATEMENT:  SELECT "users".* FROM "users" WHERE "users"."authentication_token" = $1 ORDER BY "users"."id" ASC LIMIT $2
+2022-02-23 14:54:04.873 CST [29106] ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+2022-02-23 14:54:04.873 CST [29106] DETAIL:  Key (email)=() already exists.
+2022-02-23 14:54:04.873 CST [29106] STATEMENT:  INSERT INTO "users" ("name", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"
+2022-02-23 14:59:02.049 CST [29239] ERROR:  database "StoryText_development" is being accessed by other users
+2022-02-23 14:59:02.049 CST [29239] DETAIL:  There is 1 other session using the database.
+2022-02-23 14:59:02.049 CST [29239] STATEMENT:  DROP DATABASE IF EXISTS "StoryText_development"
+2022-02-23 15:00:11.535 CST [29276] ERROR:  database "StoryText_development" is being accessed by other users
+2022-02-23 15:00:11.535 CST [29276] DETAIL:  There is 1 other session using the database.
+2022-02-23 15:00:11.535 CST [29276] STATEMENT:  DROP DATABASE IF EXISTS "StoryText_development"
+2022-02-23 15:00:51.388 CST [2876] LOG:  received fast shutdown request
+2022-02-23 15:00:51.450 CST [2876] LOG:  aborting any active transactions
+2022-02-23 15:00:51.543 CST [11916] FATAL:  terminating connection due to administrator command
+2022-02-23 15:00:51.623 CST [2876] LOG:  background worker "logical replication launcher" (PID 2889) exited with exit code 1
+2022-02-23 15:00:51.659 CST [2884] LOG:  shutting down
+2022-02-23 15:00:51.869 CST [2876] LOG:  database system is shut down
+2022-02-23 15:02:30.603 CST [29859] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-02-23 15:02:30.650 CST [29859] LOG:  listening on IPv6 address "::1", port 5432
+2022-02-23 15:02:30.650 CST [29859] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-02-23 15:02:30.651 CST [29859] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-02-23 15:02:31.154 CST [29860] LOG:  database system was shut down at 2022-02-23 15:00:51 CST
+2022-02-23 15:02:31.305 CST [29859] LOG:  database system is ready to accept connections
+2022-02-23 15:02:55.237 CST [29904] ERROR:  column "password_digest" of relation "users" does not exist
+2022-02-23 15:02:55.237 CST [29904] STATEMENT:  ALTER TABLE "users" DROP COLUMN "password_digest"
+2022-02-23 15:03:55.420 CST [29966] ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+2022-02-23 15:03:55.420 CST [29966] DETAIL:  Key (email)=() already exists.
+2022-02-23 15:03:55.420 CST [29966] STATEMENT:  INSERT INTO "users" ("name", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"
+2022-02-23 15:09:23.388 CST [30053] ERROR:  database "StoryText_development" already exists
+2022-02-23 15:09:23.388 CST [30053] STATEMENT:  CREATE DATABASE "StoryText_development" ENCODING = 'unicode'
+2022-02-23 15:09:23.556 CST [30054] ERROR:  database "StoryText_test" already exists
+2022-02-23 15:09:23.556 CST [30054] STATEMENT:  CREATE DATABASE "StoryText_test" ENCODING = 'unicode'
+2022-02-23 15:09:28.210 CST [30061] ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+2022-02-23 15:09:28.210 CST [30061] DETAIL:  Key (email)=() already exists.
+2022-02-23 15:09:28.210 CST [30061] STATEMENT:  INSERT INTO "users" ("name", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"
+2022-02-23 15:31:12.844 CST [30297] ERROR:  column "email" of relation "users" already exists
+2022-02-23 15:31:12.844 CST [30297] STATEMENT:  ALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL
+2022-02-23 15:31:37.440 CST [30327] ERROR:  column "email" of relation "users" already exists
+2022-02-23 15:31:37.440 CST [30327] STATEMENT:  ALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL
+2022-02-23 15:33:09.689 CST [30933] FATAL:  database "StoryText_development" does not exist
+2022-02-23 16:11:01.091 CST [31206] ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+2022-02-23 16:11:01.091 CST [31206] DETAIL:  Key (email)=() already exists.
+2022-02-23 16:11:01.091 CST [31206] STATEMENT:  INSERT INTO "users" ("name", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"
+2022-02-23 16:17:11.674 CST [31865] FATAL:  lock file "postmaster.pid" already exists
+2022-02-23 16:17:11.674 CST [31865] HINT:  Is another postmaster (PID 29859) running in data directory "/usr/local/var/postgres_dev"?
+2022-02-24 04:30:58.292 CST [29867] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2022-02-25 23:41:00.908 CST [5726] LOG:  starting PostgreSQL 13.5 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-02-25 23:41:01.140 CST [5726] LOG:  listening on IPv6 address "::1", port 5432
+2022-02-25 23:41:01.140 CST [5726] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-02-25 23:41:01.141 CST [5726] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-02-25 23:41:02.754 CST [5728] LOG:  database system was interrupted; last known up at 2022-02-24 02:45:32 CST
+2022-02-25 23:41:06.109 CST [5728] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-02-25 23:41:06.113 CST [5728] LOG:  redo starts at 0/EFACD58
+2022-02-25 23:41:06.113 CST [5728] LOG:  invalid record length at 0/EFACE40: wanted 24, got 0
+2022-02-25 23:41:06.113 CST [5728] LOG:  redo done at 0/EFACE08
+2022-02-25 23:41:06.184 CST [5726] LOG:  database system is ready to accept connections

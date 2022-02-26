@@ -1,17 +1,14 @@
 class Api::V1::StoryTextsController < ApplicationController
 
 
-
+#LISTS ALL STORIES TO BE ACQUIRED BY FRONT END.
     def index   
         @story_text = StoryText.all
         render json: StoryTextSerializer.new(@story_text)
     end
 
 
-
-
-
-
+#NOT YET IMPLEMENTED
         def show
             @story_text = StoryText.find_by_id(params[:id])
             render json: @story_text
@@ -34,7 +31,7 @@ class Api::V1::StoryTextsController < ApplicationController
         @story_text.images << @image
         @user.story_texts << @story_text
         @user.images << @image
-         if @story_text.save
+         if @story_text.save      
            render json: @story_text, status: :created
          else
              render json: {error: "invalid name or password"}
