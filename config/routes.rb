@@ -52,7 +52,6 @@ get'get_current_user', to: 'sessions#get_current_user'
 delete 'logout', to: 'sessions#destroy'
 
 
-get 'story_texts/create', to: 'story_texts#create'
 post 'story_texts/create', to: 'story_texts#create'
 
 #USERS DELETE NOT YET IMPLEMENTED

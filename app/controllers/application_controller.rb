@@ -8,7 +8,6 @@ rescue_from ActiveRecord::RecordInvalid, with: :invalid_record
 
 
     def welcome
-        
         user = current_api_v1_user
         story_texts = StoryText.all
         @stories = StoryText.all

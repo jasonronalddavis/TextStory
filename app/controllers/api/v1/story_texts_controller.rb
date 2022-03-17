@@ -18,7 +18,7 @@ class Api::V1::StoryTextsController < ApplicationController
 
 
      def create
-     # binding.pry
+
        if current_api_v1_user
         @user = current_api_v1_user
         @image = Image.new(url: params[:image_file])
